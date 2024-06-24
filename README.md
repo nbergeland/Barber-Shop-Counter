@@ -1,4 +1,4 @@
-I was asked in an interview how I would count the number of barbershops in a local area without searching Google on my computer.  My answer was to use the Google Maps API (Places API specifically) to run a count function in a radius around the metro area.  After the interview I was curious and built the function.  The code may be modified to count and list shops of any type in any location (using lat lng coordinates). 
+I was once asked in an interview how I would count the number of barbershops in a local area without searching Google on my computer.  My answer was to use the Google Maps API (Places API specifically) to run a count function in a radius around the metro area.  After the interview I was curious and built the function.  The code may be modified to count and list shops of any type in any location (using lat lng coordinates). 
 
 Shop-Counter
 Python Code using Google Maps API to count types of businesses in a location
