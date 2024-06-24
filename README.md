@@ -1,22 +1,22 @@
-# Shop-Counter
+Shop-Counter
 Python Code using Google Maps API to count types of businesses in a location
 
 import googlemaps
 import time
 
-# Set Google Maps API Key
+Set Google Maps API Key
 API_KEY = 'YOUR_API_HERE'
 
-# Initialize the Google Maps client
+Initialize the Google Maps client
 gmaps = googlemaps.Client(key=API_KEY)
 
-# Coordinates for Minneapolis-St. Paul metro area
+Coordinates for Minneapolis-St. Paul metro area
 location = (44.9778, -93.2650)  # Approximate central location for Minneapolis
 
-# Define the search radius in meters (you can adjust this as needed)
+Define the search radius in meters (you can adjust this as needed)
 radius = 50000  # 50 km
 
-# Function to count barbershops
+Function to count barbershops
 def count_barbershops(location, radius):
     barbershops_count = 0
     next_page_token = None
@@ -46,7 +46,7 @@ def count_barbershops(location, radius):
 
     return barbershops_count
 
-# Count the barbershops
+Count the barbershops
 barbershops_count = count_barbershops(location, radius)
 print(f'Total number of barbershops in the Minneapolis-St. Paul metro area: {barbershops_count}')
 
