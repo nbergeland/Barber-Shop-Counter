@@ -55,12 +55,13 @@ print(f'Total number of barbershops in the Minneapolis-St. Paul metro area: {bar
 **Total number of barbershops in the Minneapolis-St. Paul metro area: 60**
 
 **Print the details of each barbershop**
+
 for shop in barbershops:
 name = shop.get('name')
 address = shop.get('vicinity')
 print(f'Name: {name}, Address: {address}')
 
-Name: Jesse's Barber Shop, Address: 14 Shady Oak Rd, Hopkins
+**Name: Jesse's Barber Shop, Address: 14 Shady Oak Rd, Hopkins
 Name: Cedarvale Barber Shop, Address: 1977 Silver Bell Rd Suite 800, Eagan
 Name: Hero's barbershop llc, Address: 10012 County Rd 81, Maple Grove
 Name: Bob's Barber Shop Waconia, Address: 124 W Main St, Waconia
@@ -129,5 +130,5 @@ Name: Glenn's Barber Shop, Address: 814 W 36th St, Minneapolis
 Name: Jim's Barber Shop, Address: 949 Old Hwy 8 NW, New Brighton
 Name: Cottage Barber Shop, Address: 168 Lake St N, Forest Lake
 Name: Joanne's Barbershop, Address: 8555 Lyndale Ave S, Bloomington
-Name: Blue Collar Barbershop, Address: 6131 N 42nd Ave, Crystal
+Name: Blue Collar Barbershop, Address: 6131 N 42nd Ave, Crystal**
 
