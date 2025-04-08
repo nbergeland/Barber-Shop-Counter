@@ -1,27 +1,27 @@
-I was once asked in an interview how I would count the number of barbershops in a local area without searching Google on my computer.  My answer was to use the Google Maps API (Places API specifically) to run a count function in a radius around the metro area.  After the interview I was curious and built the function.  The code may be modified to count and list shops of any type in any location (using lat lng coordinates). 
+I was once asked in an interview how I would count the number of barbershops in a local area without searching Google on my computer.  My answer was to use the Google Maps API (Places API specifically) to run a count function in a radius around the metro area.  After the interview I was curious and built the function.  The code may be modified to count and list shops or places of any type in any location (using lat lng coordinates). 
 
 Shop-Counter
 Python Code using Google Maps API to count types of businesses in a location
 
-import googlemaps
-import time
-
-Set Google Maps API Key
-API_KEY = 'YOUR_API_HERE'
-
-Initialize the Google Maps client
-gmaps = googlemaps.Client(key=API_KEY)
-
-Coordinates for Minneapolis-St. Paul metro area
-location = (44.9778, -93.2650)  # Approximate central location for Minneapolis
-
-Define the search radius in meters (you can adjust this as needed)
-radius = 50000  # 50 km
-
-Function to count barbershops
-def count_barbershops(location, radius):
-    barbershops_count = 0
-    next_page_token = None
+    import googlemaps
+    import time
+    
+    Set Google Maps API Key
+    API_KEY = 'YOUR_API_HERE'
+    
+    Initialize the Google Maps client
+    gmaps = googlemaps.Client(key=API_KEY)
+    
+    Coordinates for Minneapolis-St. Paul metro area
+    location = (44.9778, -93.2650)  # Approximate central location for Minneapolis
+    
+    Define the search radius in meters (you can adjust this as needed)
+    radius = 50000  # 50 km
+    
+    Function to count barbershops
+    def count_barbershops(location, radius):
+        barbershops_count = 0
+        next_page_token = None
 
     while True:
         if next_page_token:
@@ -48,18 +48,18 @@ def count_barbershops(location, radius):
 
     return barbershops_count
 
-Count the barbershops
-barbershops_count = count_barbershops(location, radius)
-print(f'Total number of barbershops in the Minneapolis-St. Paul metro area: {barbershops_count}')
-
-**Total number of barbershops in the Minneapolis-St. Paul metro area: 60**
-
-**Print the details of each barbershop**
-
-for shop in barbershops:
-name = shop.get('name')
-address = shop.get('vicinity')
-print(f'Name: {name}, Address: {address}')
+    #Count the barbershops
+    barbershops_count = count_barbershops(location, radius)
+    print(f'Total number of barbershops in the Minneapolis-St. Paul metro area: {barbershops_count}')
+    
+    **Total number of barbershops in the Minneapolis-St. Paul metro area: 60**
+    
+    **Print the details of each barbershop**
+    
+    for shop in barbershops:
+    name = shop.get('name')
+    address = shop.get('vicinity')
+    print(f'Name: {name}, Address: {address}')
 
 **Name: Jesse's Barber Shop, Address: 14 Shady Oak Rd, Hopkins
 Name: Cedarvale Barber Shop, Address: 1977 Silver Bell Rd Suite 800, Eagan
