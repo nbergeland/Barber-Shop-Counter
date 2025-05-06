@@ -1,7 +1,82 @@
-I was once asked in an interview how I would count the number of barbershops in a local area without searching Google on my computer.  My answer was to use the Google Maps API (Places API specifically) to run a count function in a radius around the metro area.  After the interview I was curious and built the function.  The code may be modified to count and list shops or places of any type in any location (using lat lng coordinates). 
+# Overview
+The Barber Shop Counter repository provides tools and documentation for barbershop data collection and analysis. It contains two main components:
 
-Shop-Counter
-Python Code using Google Maps API to count types of businesses in a location
+## Purpose & Scope
+A Google Maps API integration system for counting and gathering information about barbershops in specific geographic areas
+Documentation for a conceptual retail analytics system for tracking customer flow and sales data
+This page introduces both components and their basic architecture. 
+
+Repository Structure
+The repository has a simple structure with two primary components:
+
+Barber-Shop-Counter/
+├── ShopCounter.ipynb   # Jupyter notebook with Google Maps API integration
+└── ShopCounter.pdf     # Documentation for retail analytics system concept
+
+## System Architecture Overview
+The following diagram illustrates the high-level architecture of both systems contained in this repository:
+
+### High-Level Architecture
+![Screenshot](SAO.png)
+
+## Google Maps Barbershop Counter
+The Jupyter notebook (ShopCounter.ipynb) provides functionality to:
+
+Count the total number of barbershops within a specific radius of a geographic location
+Retrieve detailed information about those barbershops (name, address)
+Handle API pagination and rate limiting for reliable data collection
+The implementation centers around two key functions:
+
+count_barbershops(): Returns the total count of barbershops in an area
+get_barbershops(): Returns detailed information about each barbershop
+
+### Google Maps Integration Data Flow
+![Image](GMIDG.png)
+
+## Conceptual Retail Analytics System
+The repository also contains documentation for a conceptual retail analytics system designed to:
+
+Track customer flow in retail environments
+Integrate with point-of-sale (POS) systems
+Provide real-time dashboards and reports
+Support decision-making with sales and customer data analytics
+This system is documented but not implemented in code within the repository.
+
+### Conceptual Retail System Architecture
+![Image](CRSA.png)
+
+## Key Components and Functionality
+### Google Maps API Integration
+Component	Purpose	Implementation
+count_barbershops()	Counts total barbershops in a geographic area	Function in ShopCounter.ipynb
+get_barbershops()	Retrieves detailed information about barbershops	Function in ShopCounter.ipynb
+Pagination Handling	Processes multiple pages of API results	Loop with next_page_token in both functions
+Rate Limiting	Prevents API usage limits being exceeded	2-second delay between API calls
+Sources: 
+ShopCounter.ipynb
+33-61
+ 
+ShopCounter.ipynb
+142-170
+
+### Conceptual Retail Analytics System
+Component	Purpose	Notes
+Customer Tracking	Monitor store foot traffic	Conceptual, not implemented
+Sales Analysis	Process transaction data	Conceptual, not implemented
+Dashboarding	Visualize key metrics	Conceptual, not implemented
+Reporting	Generate business intelligence	Conceptual, not implemented
+
+
+## Potential Use Cases
+The repository components can support various scenarios:
+
+1. Market Analysis: Using the Google Maps integration to analyze barbershop density in different regions
+2. Competitive Intelligence: Identifying barbershop clusters and understanding market saturation
+3. Customer Flow Optimization: Applying the retail analytics concepts to barbershop operations
+4. Business Performance Tracking: Combining location data with the retail analytics framework
+
+# Shop-Counter Code Notebook
+Python Code using Google Maps API to count types of businesses in a location.  'Barbershop' may be substituted for any other type of business or place.
 
     import googlemaps
     import time
