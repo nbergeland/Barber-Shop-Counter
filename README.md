@@ -31,7 +31,7 @@ count_barbershops(): Returns the total count of barbershops in an area
 get_barbershops(): Returns detailed information about each barbershop
 
 ### Google Maps Integration Data Flow
-![Image](GMIDG.png)
+![Image](GMIDF.png)
 
 ## Conceptual Retail Analytics System
 The repository also contains documentation for a conceptual retail analytics system designed to:
